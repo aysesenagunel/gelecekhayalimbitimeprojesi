@@ -1,0 +1,578 @@
+/*! BOOTSTRAP ICONLARI */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/*! YAZI STİLİ */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Site renkleri */
+:root {
+    --light-card-color: hsl(215, 51%, 70%);
+    --neon-color: hsl(178, 100%, 50%);
+    --dark-background: hsl(217, 54%, 11%);
+    --dark-card-color: hsl(216, 50%, 16%);
+    --dark-container: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--dark-background);
+    color: var(--neon-color);
+}
+
+/* ! NAVBAR */
+.navbar {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+    padding: 0 50px 0 20px;
+}
+
+.navbar-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.list {
+    font-size: 30px;
+}
+
+.heart {
+    font-size: 30px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 60px;
+}
+
+.navbar-menu li {
+    list-style: none;
+}
+
+.up-slide{
+    position: relative;
+    text-decoration: none;
+    color: var(--neon-color);
+    cursor: pointer;
+}
+
+.up-slide::before {
+    content: '';
+    width: 100%;
+    height: 0;
+    background-color: var(--neon-color);
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    padding: 0 10px;
+    bottom: -10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: height .8s;
+}
+
+.up-slide:hover {
+    color: var(--dark-background);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.up-slide:hover::before {
+    height: 60px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.uye-button a {
+    margin-right: 22px;
+    padding: 10px 20px;
+    color: var(--neon-color);
+    text-decoration: none;
+    border: 1px solid var(--neon-color);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.uye-button a:hover {
+    background-color: var(--neon-color);
+    color: var(--dark-background);
+    transition: .5s;
+    font-weight: bold;
+    box-shadow: 1px 1px 8px var(--neon-color);
+}
+
+.sun {
+    color: var(--neon-color);
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.moon {
+    color: var(--neon-color);
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+}
+
+/* ! SIDEBAR */
+
+.sidebar {
+    padding: 70px  0 10px 16px;
+    position: fixed;
+    left: -120%;
+    top: 0;
+    bottom: 144px;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-items a {
+    color: var(--neon-color);
+    text-decoration: none;
+}
+
+.sidebar-items a span {
+    padding-left: 10px;
+}
+
+.show-sidebar{
+    left: 0;
+}
+
+.point {
+    cursor: pointer;
+}
+
+.point:hover {
+    transform: scale(1.1);
+}
+
+/*! HEADER */
+.header {
+    position: fixed;
+    left: 150px;
+    top: 60px;
+    right: 0;
+    bottom: 144px;
+    padding: 60px 120px 60px 0;
+}
+
+.container {
+    padding: 60px;
+    border-radius: 10px;
+    background-color: var(--dark-container);
+}
+
+/* Container kaydırma animasyonu */
+.animation {
+    opacity: 0;
+    transform: translateX(120px);
+    animation: moveup .8s linear forwards;
+}
+
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card {
+    background-color: var(--dark-card-color);
+    height: 300px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.main-image {
+    position: relative;
+}
+
+.main-image:hover .overlay {
+    opacity: .5;
+    height: 100%;
+    width: 300px;
+}
+
+.main {
+    border: 5px solid var(--dark-container);
+    width: auto;
+    height: 290px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.content {
+    padding: 0 24px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.content p{
+    font-weight: bold;
+}
+
+.content-time {
+    padding-top: 16px;
+    display: flex;
+    gap: 30px; 
+}
+
+.content-time div {
+    display: flex;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.ucret-button, .katil-button {
+    background-color: var(--white);
+    color: var(--dark-background);
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    bottom: 0;
+}
+
+.ucret-button:hover, .katil-button:hover {
+    box-shadow: 1px 1px 8px var(--neon-color);
+}
+
+table {
+    align-items: center;
+    width: 30%;
+    border-radius: 10px;
+    border: 5px solid var(--dark-container);
+}
+
+table tr th {
+    font-size: 14px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+/* !FOOTER */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-title {
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.footer-title:hover {
+    text-decoration-line: underline;
+}
+
+.global {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.woman-list {
+    display: flex;
+    gap: 20px;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+}
+
+.woman-list li {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.woman-list li:hover {
+    transform: scale(1.1);
+    margin: 0 5px;
+}
+
+.woman-list li img {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+    background-color: var(--dark-background);
+    border-radius: 10px;
+}
+
+.woman-list li:hover .overlay {
+    opacity: .8;
+}
+
+.image-text {
+    font-weight: 700;
+    color: var(--neon-color);
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* !OKLAR */
+.arrow  {
+    display: flex;
+    font-size: 50px;
+    background-color: var(--dark-background);
+    padding: 36px 0;
+    color: var(--neon-color);
+    cursor: pointer;
+    opacity: .5;
+    position: absolute;
+    transition: .5s ease all;
+    z-index: 1;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+/* !DARK-LIGHT MODE*/
+
+body, .navbar, .sidebar, .header, .containers, .footer {
+    transition: background-color 0.5s, color 0.2s;
+}
+
+body.active {
+    background-color: var(--white);
+    color: var(--dark-background);
+}
+
+.navbar-menu li.active {
+    font-weight: bold;
+}
+
+.navbar-menu a.active {
+    color: var(--dark-background);
+}
+
+.uye-button a.active {
+    margin-right: 2px;
+    background-color: var(--light-card-color);
+    color: var(--white);
+    border: 1px solid var(--light-card-color);
+}
+
+.uye-button a:hover.active {
+    background-color: var(--neon-color);
+    color: var(--dark-background);
+    border: 1px solid var(--neon-color);
+    box-shadow: 1px 1px 8px var(--dark-background);
+}
+
+.sun.active {
+    transition: .5s ease all;
+    opacity: 0;
+}
+
+.moon.active {
+    transition: .5s ease all;
+    position: relative;
+    opacity: 1;
+}
+
+.sidebar a.active {
+    color: var(--dark-background);
+}
+
+.container.active {
+    background-color: var(--light-card-color);
+}
+
+.card.active {
+    background-color: var(--white);
+}
+
+.main.active {
+    border: 5px solid var(--light-card-color);
+}
+
+.ucret-button.active, .katil-button.active {
+    transition: background-color 0.3s, transform 0.3s;
+    background-color: var(--light-card-color);
+}
+
+.ucret-button:hover.active, .katil-button:hover.active {
+    box-shadow: 1px 1px 8px var(--dark-background);
+}
+
+table.active {
+    border-color: var(--light-card-color);
+}
+
+.overlay.active {
+    background-color: var(--white);
+}
+
+.image-text.active {
+    color: var(--dark-background);
+}
+
+.arrow.active {
+    background-color: var(--white);
+}
+
+/*! RESPOSIVE */
+
+@media (max-width: 1400px) {
+    * {
+        font-size: 12px;
+    }
+
+    .header {
+        width: auto;
+    }
+
+    .card {
+        width: auto;
+    }
+
+    .main-image:hover .overlay {
+        width: auto;
+    }
+
+    .content {
+        padding: 0 20px;
+        gap: 16px;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .content h1 {
+        font-size: 20px;
+    }
+
+    .content h4 {
+        font-size: 12px;
+    }
+
+    .content h5 {
+        font-size: 10px;
+    }
+
+    .content-time {
+        gap:10px;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        gap: 20px;
+        display: none; /* Varsayılan olarak gizle */
+    }
+
+    .navbar-toggle {
+        display: block; /* Hamburger menüyü göster */
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Aktif olduğunda göster */
+        flex-direction: column;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .footer {
+        text-align: center; /* Metni ortala */
+    }
+
+    .global {
+        flex-direction: column; /* Dikey hizalama */
+    }
+
+    .woman-list {
+        flex-direction: column; /* Dikey liste düzeni */
+    }
+
+    .main-image img {
+        width: 100%; /* Görselin tam genişliğini kullan */
+        height: auto; /* Yüksekliği otomatik ayarla */
+    }
+
+    .content h1 {
+        font-size: 20px; /* Başlık boyutunu küçült */
+    }
+
+    .content h4 {
+        font-size: 16px; /* Alt başlık boyutunu ayarla */
+    }
+    .ucret, .katil {
+        padding: 15px; /* Buton padding'ini artır */
+        font-size: 18px; /* Font boyutunu büyüt */
+    }
+}
